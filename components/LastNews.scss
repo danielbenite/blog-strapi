@@ -1,0 +1,65 @@
+.lastnews--wrapper {
+    padding: 40px 0;
+}
+
+.lastnews--title {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 32px;
+
+    h1 {
+        text-transform: uppercase;
+        font-family: var(--font-display);
+        margin: 0;
+    }
+
+    p {
+        font-family: var(--font-display);
+        text-transform: uppercase;
+    }
+
+    a {
+        cursor: pointer;
+    }
+}
+
+.lastnews--card {
+    display: flex;
+    gap: 35px;
+}
+
+.card {
+    width: 294px;
+    height: auto;
+    margin-bottom: 10px;
+
+    span {
+        background-color: var(--tag-entretenimento);
+        color: var(--main-white);
+        padding: 2px 8px;
+        text-transform: uppercase;
+        font-family: var(--font-display);
+    }
+
+    h3 {
+        margin: 0;
+        padding: 14px 0;
+        font-family: var(--font-display);
+        text-transform: uppercase;
+        line-height: 1.1em;
+    }
+
+    p {
+        margin: 0;
+    }
+}
+
+.card--img {
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.rounded--img {
+    border-radius: 16px;
+}

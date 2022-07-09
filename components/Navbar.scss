@@ -1,0 +1,30 @@
+nav {
+    width: 100%;
+    padding: 20px 0;
+    background-color: var(--bg-black);
+}
+
+.nav--wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav--link {
+    color: var(--main-white);
+    text-transform: uppercase;
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    font-family: var(--font-display);
+    font-weight: 600;
+}
+
+.nav--link>li {
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.nav--link>li:hover {
+    color: var(--main-cyan);
+}

@@ -26,6 +26,7 @@
 
 .lastnews--card {
     display: flex;
+    flex-direction: row-reverse;
     gap: 35px;
 }
 
@@ -35,11 +36,11 @@
     margin-bottom: 10px;
 
     span {
-        background-color: var(--tag-entretenimento);
         color: var(--main-white);
         padding: 2px 8px;
         text-transform: uppercase;
         font-family: var(--font-display);
+        font-size: 12px;
     }
 
     h3 {
@@ -48,6 +49,7 @@
         font-family: var(--font-display);
         text-transform: uppercase;
         line-height: 1.1em;
+        font-size: 16px;
     }
 
     p {

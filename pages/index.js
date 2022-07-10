@@ -1,10 +1,12 @@
 import axios from "axios";
+import Hero from "../components/Hero";
 import LastNews from "../components/LastNews";
 
 
 export default function Home(posts) {
   return (
     <>
+      <Hero posts={posts}/>
       <LastNews posts={posts} />
     </>
   )

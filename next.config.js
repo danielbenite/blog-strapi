@@ -1,12 +1,10 @@
-module.exports = {
-  webpack: (config) => {
-    config.module.rules.push({
-      test: /\.md$/,
-      use: 'raw-loader'
-    });
-    return config
-  },
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+  swcMinify: true,
   images: {
     domains: ["res.cloudinary.com"],
   },
 }
+
+module.exports = nextConfig

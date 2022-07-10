@@ -2,10 +2,17 @@ import Image from 'next/image'
 import Newspaper from '../src/newspaper.svg'
 import Arrow from '../src/arrow.svg'
 import LastNewsCard from './LastNewsCard'
+import { useEffect, useState } from "react"
 
 export default function LastNews(posts) {
+    const [latestPosts, setLatestPosts] = useState([]);
+
+    useEffect(() => {
+        setLatestPosts(posts.posts.posts.data.slice(-4));
+    }, [posts]);
+
     function renderLastNewsCard() {
-        return posts.posts.posts.data.map(post => {
+        return latestPosts.map(post => {
             return <LastNewsCard post={post} key={post.id} />
         })
     }

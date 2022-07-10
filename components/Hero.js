@@ -14,7 +14,7 @@ export default function Hero(posts) {
     const [bottomPosts, setBottomPosts] = useState([]);
 
     useEffect(() => {
-        setBottomPosts(posts.posts.posts.data.slice(1, 5));
+        setBottomPosts(posts.posts.posts.data.slice(2, 6));
     }, [posts]);
 
     return (

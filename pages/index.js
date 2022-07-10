@@ -6,7 +6,7 @@ import LastNews from "../components/LastNews";
 export default function Home(posts) {
   return (
     <>
-      <Hero posts={posts}/>
+      <Hero posts={posts} />
       <LastNews posts={posts} />
     </>
   )
@@ -18,6 +18,7 @@ export async function getStaticProps() {
   return {
     props: {
       posts: database.data
-    }
+    },
+    revalidate: 10,
   }
 }

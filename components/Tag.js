@@ -13,7 +13,9 @@ const Tag = ({ category }) => {
                                             category === 'Nintendo' ? '#FF0000' :
                                                 category === 'Notebook' ? '#FF7A00' :
                                                     category === 'Review' ? '#0075FF' :
-                                                        category === 'Notebook' ? '#FF7A00' : '#FF0000'
+                                                        category === 'Entretenimento' ? '#AD00FF' :
+                                                            category === 'Série' ? '#7AC500' :
+                                                                category === 'Notebook' ? '#FF7A00' : '#FF0000'
 
             }}>{category}</span>
         </>

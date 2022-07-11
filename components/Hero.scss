@@ -15,6 +15,15 @@
         display: flex;
         flex-basis: 50%;
         height: 380px;
+        cursor: pointer;
+
+        &:hover .hero--img {
+            transform: scale(1.03);
+        }
+
+        &:hover .mask-square {
+            transform: scale(1.03);
+        }
     }
 }
 
@@ -28,11 +37,21 @@
         display: flex;
         flex-basis: 50%;
         height: 380px;
+        cursor: pointer;
+
+        &:hover .hero--img {
+            transform: scale(1.03);
+        }
+
+        &:hover .mask-square {
+            transform: scale(1.03);
+        }
     }
 }
 
 .hero--img {
     width: 100%;
+    transition: all 0.3s ease;
 }
 
 .hero--info {
@@ -73,4 +92,5 @@
         linear-gradient(180deg,
             rgba(0, 0, 0, 0.06) calc(20%/var(--s) + var(--p)),
             rgba(0, 0, 0, 1) calc(100%/var(--s) + var(--p)));
+    transition: all 0.3s ease;
 }

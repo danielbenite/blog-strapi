@@ -34,6 +34,11 @@
     width: 294px;
     height: auto;
     margin-bottom: 10px;
+    cursor: pointer;
+
+    &:hover .card--img {
+        transform: scale(1.05);
+    }
 
     span {
         color: var(--main-white);
@@ -60,6 +65,7 @@
 .card--img {
     position: relative;
     margin-bottom: 16px;
+    transition: all 0.5s ease;
 }
 
 .rounded--img {

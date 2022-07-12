@@ -4,8 +4,10 @@ import Stranger from '../../src/posts/stranger.jpg'
 import Ads from '../../src/ads/stories.png'
 import Newspaper from '../../src/newspaper.svg'
 import Arrow from '../../src/arrow.svg'
+import axios from 'axios'
 
-export default function Post() {
+export default function Post(posts) {
+    console.log(posts)
     return (
         <>
             <section className="post--wrapper container">
@@ -26,9 +28,9 @@ export default function Post() {
                             <div className="post--article_cover">
                                 <Image src={Stranger} layout='fill' objectFit="cover" className="rounded--img" />
                             </div>
-                            <span>entretenimento</span>
-                            <h1>Stranger Things 4: Netflix revela prévia do volume2 da quarta temporada</h1>
-                            <p>Stranger Things 4: Netflix revela prévia do volume 2 da quarta temporada</p>
+                            <span>{posts.posts.data[0].attributes.tag}</span>
+                            <h1>{posts.posts.data[0].attributes.title}</h1>
+                            <p>{posts.posts.data[0].attributes.description}</p>
                             <div className="post-article_info">
                                 <div className='post--article_avatar'>
                                     <Image src={Stranger} width={60} height={60} objectFit="cover" style={{ borderRadius: '100%' }} />
@@ -41,14 +43,7 @@ export default function Post() {
 
                         <div className="post--article_grid">
                             <div className="post--content">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris lacus eu turpis massa nulla diam ut. Nec, dictum velit nunc,
-                                    condimentum netus morbi facilisis nunc. Augue tristique sagittis tincidunt mattis non proin. Tortor elementum adipiscing sit
-                                    hendrerit donec ornare aliquam odio varius. Dignissim donec dui egestas dictum eu purus a. Id vitae massa elementum fringilla
-                                    netus ipsum risus tristique faucibus. Turpis arcu faucibus nec in vestibulum. Risus mus diam duis velit lectus.
-                                    Suscipit commodo, egestas et pharetra nunc tristique augue convallis. Vitae ullamcorper massa aenean auctor faucibus.
-                                    Libero lorem blandit arcu eu proin. Id morbi massa phasellus iaculis quam. Malesuada sed volutpat maecenas feugiat.
-                                    Luctus adipiscing diam adipiscing odio tortor pulvinar. Dignissim lectus justo, diam fringilla vel a et, non dolor.
-                                    Imperdiet consequat auctor lacus, mollis nec feugiat vitae.</p>
+                                <p>{posts.posts.data[0].attributes.content}</p>
                             </div>
                             <div className="sidebar">
                                 <div className="post--ads_img">
@@ -83,4 +78,14 @@ export default function Post() {
             </section>
         </>
     )
+}
+
+export async function getServerSideProps() {
+    const database = await axios.get('https://mysterious-river-92048.herokuapp.com/api/posts?populate=*');
+    
+    return {
+        props: {
+            posts: database.data
+        }
+    }
 }

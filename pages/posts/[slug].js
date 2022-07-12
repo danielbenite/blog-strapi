@@ -1,6 +1,9 @@
 import Tag from "../../components/Tag";
 import Image from 'next/image'
 import Stranger from '../../src/posts/stranger.jpg'
+import Ads from '../../src/ads/stories.png'
+import Newspaper from '../../src/newspaper.svg'
+import Arrow from '../../src/arrow.svg'
 
 export default function Post() {
     return (
@@ -47,26 +50,34 @@ export default function Post() {
                                     Luctus adipiscing diam adipiscing odio tortor pulvinar. Dignissim lectus justo, diam fringilla vel a et, non dolor.
                                     Imperdiet consequat auctor lacus, mollis nec feugiat vitae.</p>
                             </div>
-                            <div className="sidebar"></div>
+                            <div className="sidebar">
+                                <div className="post--ads_img">
+                                    <Image src={Ads} layout='fill' objectFit="cover" />
+                                </div>
+
+                                <div>
+                                    <div className='post--hot_title'>
+                                        <Image src={Newspaper} />
+                                        <h1>últimas notícias</h1>
+                                        <div>
+                                            <p><a>ver todos <Image src={Arrow} /></a></p>
+                                        </div>
+                                    </div>
+                                    <div className='post--hot_card'>
+                                        <div className='post--hot_cover'>
+                                            <Image src={Stranger} layout='fill' objectFit="cover" className="rounded--img" />
+                                        </div>
+                                        <div className="post--hot_info">
+                                            <span>entretenimento</span>
+                                            <h2>Netflix pode comprar a Roku por US$ 13 bilhões, diz vazamento</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
-                        <div>
-                            <div>
-                                <img />
-                            </div>
+                        <div></div>
 
-                            <div>
-                                <div>
-                                    <img />
-                                    <h2></h2>
-                                </div>
-                                <div>
-                                    <p></p>
-                                    <img />
-                                </div>
-                            </div>
-
-                        </div>
                     </article>
                 </section>
             </section>

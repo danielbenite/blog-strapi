@@ -4,6 +4,7 @@ import LastNews from "../components/LastNews";
 
 
 export default function Home(posts) {
+  console.log(posts)
   return (
     <>
       <Hero posts={posts} />

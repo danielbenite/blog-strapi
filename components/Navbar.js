@@ -9,7 +9,7 @@ export default function Navbar() {
         <nav>
             <div className='container nav--wrapper'>
                 <Link href='/'>
-                    <Image src={Logo} className="cursor"/>
+                    <Image src={Logo} className="cursor" />
                 </Link>
                 <ul className='nav--link'>
                     <li>útimas notícias</li>
@@ -17,7 +17,7 @@ export default function Navbar() {
                     <li>tecnologia</li>
                     <li>entretenimento</li>
                     <li>reviews</li>
-                    <Link href='/posts/id'><li>dicas</li></Link>
+                    <li>dicas</li>
                 </ul>
                 <ul className='nav--link'>
                     <li><Image src={Search} /></li>

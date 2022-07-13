@@ -7,7 +7,6 @@ import axios from 'axios'
 import Tag from '../../components/Tag'
 
 export default function Post({ post }) {
-    console.log(post)
     return (
         <>
             <section className="post--wrapper container">

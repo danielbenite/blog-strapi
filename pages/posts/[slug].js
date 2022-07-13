@@ -5,6 +5,7 @@ import Newspaper from '../../src/newspaper.svg'
 import Arrow from '../../src/arrow.svg'
 import axios from 'axios'
 import Tag from '../../components/Tag'
+import { DateTime } from "luxon";
 
 export default function Post({ post }) {
     return (
@@ -33,10 +34,10 @@ export default function Post({ post }) {
                             <div className="post-article_info">
                                 <div className='post--article_avatar'>
                                     <Image src={Stranger} width={60} height={60} objectFit="cover" style={{ borderRadius: '100%' }} />
-                                    <p>Publicado por <span>Christian Bale</span></p>
+                                    <p>Publicado por <span>{post.data[0].attributes.author.data.attributes.name}</span></p>
                                 </div>
-                                <span>{' | '}9 de junho de 2022 às 14:27</span>
-                                <span>{' | '}Atualizado há 1 hora</span>
+                                <span>•</span>
+                                <span>{DateTime.now(post.data[0].attributes.publishedAt).toLocaleString(DateTime.DATE_MED)}</span>
                             </div>
                         </div>
 
@@ -90,7 +91,7 @@ export async function getStaticPaths() {
 
     return {
         paths,
-        fallback: true,
+        fallback: false,
     };
 }
 

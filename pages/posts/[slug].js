@@ -37,7 +37,7 @@ export default function Post({ post }) {
                                     <p>Publicado por <span>{post.data[0].attributes.author.data.attributes.name}</span></p>
                                 </div>
                                 <span>•</span>
-                                <span>{DateTime.now(post.data[0].attributes.publishedAt).toLocaleString(DateTime.DATE_MED)}</span>
+                                <span>{DateTime.now(post.data[0].attributes.publishedAt).toLocaleString(DateTime.DATE_MED)} às</span>
                             </div>
                         </div>
 
